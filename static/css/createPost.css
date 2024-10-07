@@ -1,0 +1,500 @@
+body {
+    /* font-family: Arial, sans-serif;
+    background-color: #f1eee9;
+    margin: 0;
+    padding: 0;
+    color: #4b847d; */
+    font-family: Trebuchet MS;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url("/static/img/background.png");
+    overflow: auto;
+    /* background: linear-gradient(315deg, rgba(101, 0, 94, 1) 3%, rgba(60, 132, 206, 1) 38%, rgba(48, 238, 226, 1) 68%, rgba(255, 25, 25, 1) 98%); */
+    animation: gradient 8s ease infinite;
+    background-size: 200% 200%;
+    background-attachment: fixed;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* background-size: cover; */
+    /* Ensures the image covers the entire button area */
+    /* background-position: center; */
+    /* Centers the background image */
+    /* background-repeat: no-repeat; */
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+/* Header menu styling */
+/* .header {
+    background-color: #4b847d;
+    padding: 20px 20px;
+    /* Increased the height of the menu bar */
+/* display: flex;
+    justify-content: center;
+    /* Center the menu bar */
+/* align-items: center;
+    position: relative;
+    /* Added to position profile icon */
+/* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+
+
+/* User profile icon */
+.user-profile {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    /* Vertically center the icon */
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.user-profile img:hover {
+    opacity: 0.8;
+}
+
+
+/* .menu {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    /* Center the menu items */
+/* width: 100%;
+    margin-right: 70px; */
+/* Space for user profile icon */
+/* }
+
+.menu a {
+    color: #f1eee9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+} */
+
+.container {
+    /* background-image: url("/static/img/background.png");
+    overflow: auto; */
+    /* background: linear-gradient(315deg, rgba(101, 0, 94, 1) 3%, rgba(60, 132, 206, 1) 38%, rgba(48, 238, 226, 1) 68%, rgba(255, 25, 25, 1) 98%); */
+    /* animation: gradient 8s ease infinite;
+    background-size: 200% 200%;
+    background-attachment: fixed;
+    align-items: center;
+    width: 100%;
+    height: 100%; */
+    /* background-size: cover; */
+    /* Ensures the image covers the entire button area */
+    /* background-position: center; */
+    /* Centers the background image */
+    /* background-repeat: no-repeat; */
+}
+
+/* @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+} */
+
+.posts-container {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    /* Center the posts container */
+}
+
+/* Post box styling */
+.post-box {
+    background-color: #f7f6f4;
+    /* border: 1px solid #dac2a8; */
+    width: 500px;
+    height: 350px;
+    overflow: visible;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 900px;
+    /* Increased the max width */
+    margin: auto;
+}
+
+.post-box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.post-box-header .username {
+    font-weight: bold;
+    color: #4b847d;
+}
+
+.post-box-header .menu-dots {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.post-box-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 18px;
+
+}
+
+
+.post-title {
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    border: 0px solid #dac2a8;
+    border-radius: 5px;
+    color: #4b847d;
+    background-color: #f7f6f4;
+}
+
+.post-textarea {
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    height: 150px;
+    border: 0px solid #dac2a8;
+    border-radius: 5px;
+    color: #4b847d;
+    background-color: #f7f6f4;
+    resize: none;
+    /* Prevent resizing */
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.post-box-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.like-icon,
+.dislike-icon {
+    cursor: pointer;
+    color: #4b847d;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.like-icon:hover {
+    color: #ff4d4d;
+    /* Red color for the heart */
+}
+
+.dislike-icon:hover {
+    color: #294642;
+    /* Dark blue for the thumbs down */
+}
+
+/* Ensure the icons are vertically aligned */
+.like-icon,
+.dislike-icon {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Optional: Add an animation or transform effect for extra style */
+.like-icon:hover i,
+.dislike-icon:hover i {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+
+.button-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Align content to the start */
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: #4b847d;
+}
+
+.sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    /* Keep this consistent with the initial button size */
+    height: 100%;
+}
+
+.sign img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.text {
+    position: absolute;
+    right: 2%;
+    width: 0%;
+    opacity: 0;
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+    white-space: nowrap;
+}
+
+.Btn:hover {
+    width: 200px;
+    border-radius: 40px;
+    transition-duration: .3s;
+    /* background-image: url("https://t3.ftcdn.net/jpg/01/76/11/68/360_F_176116892_RQEN1MneXLtDEJQHC8s1HuO4t63gSEQj.jpg"); */
+    background-color: #f1eee9;
+    background-size: cover;
+    /* Ensures the image covers the entire button area */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Prevents repeating the image */
+    border: 3px solid #4b847d;
+}
+
+.Btn:hover .sign {
+    /* width: 30%; */
+    /* Shrinks the image container */
+    /* transition-duration: .3s;
+    padding-left: 8%;
+    padding-right: 8%; */
+    /* color: #4b847d; */
+}
+
+.Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+    color: #151515;
+}
+
+.Btn:active {
+    transform: translate(2px, 2px);
+}
+
+
+
+.banner {
+    /* width: 100%;
+    height: 500px; */
+    /* / the linear gradient color adds a top color on the image  /
+    / background-image:#fff; / */
+    /* / url(../images/index-backround.jpg);  */
+    /* background-size: 100%; */
+    /* padding-bottom: 5%; */
+    /* background-position: center; */
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.237), rgba(0, 0, 0, 0.75)), url(../images/bannerimage.jpg); */
+
+}
+
+.navbar {
+    width: 100%;
+    margin: auto;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f1eee9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    font-family: Trebuchet MS;
+
+}
+
+.banner h1 {
+    width: 110px;
+    cursor: pointer;
+    color: #000000;
+    padding-left: 5%;
+    font-size: 20px;
+    font: Trebuchet MS;
+
+}
+
+.banner ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    padding-right: 30px;
+    font-size: 15px;
+}
+
+.banner ul li a {
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+
+}
+
+.banner ul li a:hover {
+    /* / MENU HOVER STYLE / */
+    color: #4b847d;
+    transition: color 0.3s ease;
+}
+
+.content {
+    width: 100%;
+    position: relative;
+    top: 50%;
+    /* / makes it vertiaclly centered */
+    transform: translateY(-50%);
+    text-align: center;
+    padding-top: 50px;
+    padding-top: 50px;
+}
+
+/* Container for categories and posts */
+.main-content {
+    display: flex;
+    padding-top: 50px;
+    /* gap: 20px; */
+    /* padding: 20px; */
+    /* margin-left: 0; */
+}
+
+.sidebar-container {
+    color: #1f1f1f;
+    font-size: 20px;
+    /* Darker shade for text */
+    width: 300px;
+    margin-top: 30px;
+    padding-top: 40px;
+    padding-left: 70px;
+    margin-left: 70px;
+    height: 60vh;
+    background-color: #f1eee9;
+    /* Light grey background */
+    border-top-right-radius: 80px;
+    border-top-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-bottom-left-radius: 80px;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* display: flex; */
+}
+
+.sidebar-container a {
+    font-size: 15px;
+    color: #1f1f1f;
+    /* Darker text color */
+    display: block;
+    padding: 12px;
+    padding-left: 30px;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.sidebar-container a:hover {
+    color: #f1eee9;
+    /* Beigeish hover color */
+    background: #4b847d;
+    /* Dark blue background on hover */
+    outline: none;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.sidebar-container a i {
+    margin-right: 5px;
+}
+
+.sidebar-container a:hover::after {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: 100%;
+    right: 0;
+    height: 35px;
+    width: 35px;
+    border-bottom-right-radius: 18px;
+    box-shadow: 0 20px 0 0 #4b847d;
+    /* Dark blue shadow */
+}
+
+.sidebar-container a:hover::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    top: 38px;
+    right: 0;
+    height: 35px;
+    width: 35px;
+    border-top-right-radius: 18px;
+    box-shadow: 0 -20px 0 0 #4b847d;
+    /* Dark blue shadow */
+}
+
+.sidebar-container p {
+    margin: 0;
+    padding: 40px 0;
+}

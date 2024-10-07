@@ -1,0 +1,87 @@
+/* .banner {
+    width: 100%;
+    height: 500px;
+    /* the linear gradient color adds a top color on the image  */
+    /* background-image:#fff; */
+    /* url(../images/index-backround.jpg); */
+
+
+
+.navbar {
+    width: 100%;
+    margin: auto;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    /* spaces out the divs */
+    justify-content: space-between;
+    background-color: #f1eee9;
+    /* Add drop shadow */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    font-family: Trebuchet MS;
+
+}
+
+.banner h1 {
+    width: 110px;
+    cursor: pointer;
+    color: #000000;
+    padding-left: 5%;
+    font-size: 20px;
+    font: Trebuchet MS;
+
+}
+
+h1 a {
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Trebuchet MS';
+    cursor: pointer;
+}
+
+.banner ul li {
+    /* MENU DISPLAY */
+    list-style: none;
+    /* makes the menu horizontal :*/
+    display: inline-block;
+    margin: 0 20px;
+    padding-right: 30px;
+    font-size: 15px;
+}
+
+/* you cant put the color and display functionality in the same brac */
+/* instaed we put it in the same titled brac but add an a at the end  */
+
+.banner ul li a {
+    /* MENU STYLE */
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+
+}
+
+.banner ul li a:hover {
+    /* MENU HOVER STYLE */
+    color: #4b847d;
+    transition: color 0.3s ease;
+}
+
+.user-profile {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    /* Vertically center the icon */
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.user-profile img:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORUM PROJECT</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+
+<body>
+    <!-- BANNER 1 -->
+    <div class="banner">
+        <div class="navbar">
+            <!-- title -->
+            <h1><a href="/home">CRUST & CRUMBLES</a></h1>
+            <!-- menu -->
+            <!-- includes links to other pages -->
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/posts">posts</a></li>
+                <li>
+                    <div class="user-profile">
+                        <a href="/profile">
+                            <img src="https://digitalhealthskills.com/wp-content/uploads/2022/11/3da39-no-user-image-icon-27.png"
+                                alt="User Profile">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2>WELCOME CRUST & CRUMBLES</h2>
+            <p> </p>
+            <div>
+                {{if .Username}}
+                <h2>Hello, {{.Username}}</h2>
+                {{else}}
+                <!-- span is for the hover  -->
+                <!-- <button type="button"><span></span> UPCOMING CONCERTS </button> -->
+                <a href="/login" style="text-decoration: none;">
+                    <button type="button"><span></span> LOGIN INTO ACCOUNT </button>
+                    <a href="/register" style="text-decoration: none;">
+                        <button type="button"><span></span> SIGN UP</button>
+                    </a>
+                </a>
+                {{end}}
+            </div>
+        </div>
+    </div>
+
+    <!-- BANNER 0.5 -->
+    <div class="banner05">
+        <div class="content05">
+            <h4>Trending Recipes</h4>
+        </div>
+        <div class="imagecontainer">
+            <div class="images">
+                <img src="https://i.pinimg.com/736x/f4/fb/b4/f4fbb4c31b7cfbaed9cb779be0bd0aa4.jpg"
+                    alt="trending image 1">
+                <img src="https://i.pinimg.com/564x/02/47/1d/02471de87c3feec43fc5b7042c282b49.jpg"
+                    alt="trending image 2">
+                <img src="https://i.pinimg.com/564x/a4/0f/11/a40f11b537b6bae65a98251365022874.jpg"
+                    alt="trending image 3">
+                <img src="https://i.pinimg.com/564x/e8/e6/d8/e8e6d878299facf5a381af6d0c86d149.jpg"
+                    alt="trending image 4">
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- BANNER 2 -->
+    <!-- New About Us section -->
+    <div class="banner2">
+        <div class="content2">
+            <h3>About Us</h3>
+            <p>Welcome to our community! Here, we celebrate the joy of cooking by sharing our favorite recipes and
+                personal cooking journeys.<br>
+                Whether you're a seasoned chef or just starting out, you'll find inspiration and support from fellow
+                food lovers.
+                We also offer a bakery with fresh, homemade goods for you to enjoy, along with a selection of unique
+                kitchen merchandise to elevate your cooking experience.<br>
+                Join us as we explore the world of flavors, one recipe at a time!
+            </p>
+        </div>
+        <div class="aboutimage">
+            <img src="https://i.pinimg.com/564x/7a/d3/b4/7ad3b4fbcba7e0b64af636a86172bdcd.jpg" alt="About Us Image">
+        </div>
+
+    </div>
+    <!-- BANNER 3 -->
+    <div class="banner3">
+        <div class="content3">
+            <h5>CONTACT</h5>
+            <div class="sections">
+                <a href="mailto:crustandcrumbles@gmail.com">crustandcrumbles@gmail.com</a>
+                <a href="tel:1234567890"> Tell: 123-456-7890</a>
+
+                <p> © crustandcrumbles</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    </div>
+</body>
+
+</html>

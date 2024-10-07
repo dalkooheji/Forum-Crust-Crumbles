@@ -1,0 +1,32 @@
+{{range .}}
+<div class="post-box">
+    <a href="/posts/{{.PostID}}" class="post-link" style=" text-decoration:none;  color:inherit;";>
+        <div class="post-box-header">
+            <div class="username">{{.Username}}</div>
+            <div class="categories">{{.Categories}}</div>
+            <div class="date">{{.CreatedAt.Format "Jan 2, 2006 3:04 PM"}}</div>
+            <div class="menu-dots">•••</div>
+        </div>
+        <div class="post-box-content">
+            <h3>{{.Title}}</h3>
+            <p>{{.Content}}</p>
+        </div>
+    </a>
+        <div class="post-box-footer">
+            <span class="like-icon" onclick="toggleLike('{{.PostID}}')" id="like-icon-{{.PostID}}">
+                <i class="fas fa-thumbs-up"></i> <span id="like-count-{{.PostID}}">{{.LikeCount}}</span>
+            </span>
+
+            <span class="dislike-icon" onclick="toggleDislike('{{.PostID}}')" id="dislike-icon-{{.PostID}}">
+                <i class="fas fa-thumbs-down"></i> <span id="dislike-count-{{.PostID}}">{{.DislikeCount}}</span>
+            </span>
+            <a href="/posts/{{.PostID}}#comment-form" class="comment-link">
+            <span class="comment-icon">
+                <i class="fas fa-comment"></i> <span id="comments-count-{{.PostID}}">{{.CommentsCount}}</span>
+            </span>
+            </a>
+        </div>
+   
+
+</div>
+{{end}}

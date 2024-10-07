@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/profile.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <title>Profile</title>
+</head>
+
+<body>
+  
+        <div class="banner">
+            <div class="navbar">
+                <!-- title -->
+                <h1><a href="/home">CRUST & CRUMBLES</a></h1>
+                <!-- menu -->
+                <!-- includes links to other pages -->
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/posts">posts</a></li>
+                    <li>
+                        <div class="user-profile">
+                            <a href="/profile">
+                                <img src="https://digitalhealthskills.com/wp-content/uploads/2022/11/3da39-no-user-image-icon-27.png"
+                                    alt="User Profile">
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+  
+    <div class="profile-container">
+        <div class="profile-info">
+            <div class="pfp">
+                <img src="{{.Icon}}" alt="User Profile">
+            </div>
+            <label for="username">Username: {{.Username}}</label>
+            <label for="email">Email: {{.Email}}</label>
+            <label for="date-created">Date Created: {{.DateCreated.Format "02-Jan-2006"}}</label>
+            <label for="created-posts">Created Posts: {{.CreatedPosts}}</label>
+            <label for="liked-posts">Liked Posts: {{.LikedPosts}}</label>
+            <label for="disliked-posts">Disliked Posts: {{.DislikedPosts}}</label>
+            <button id="show-filters" onclick="toggleFilters()">Show Filters</button>
+            <div class="logout">
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+        <div class="posts-container">
+            <div class="tabs">
+                <button class="tab-button active" onclick="showTab('user-posts')">Your Posts</button>
+                <button class="tab-button" onclick="showTab('liked-posts')">Liked Posts</button>
+                <button class="tab-button" onclick="showTab('disliked-posts')">Disliked Posts</button>
+            </div>
+            <div id="user-posts" class="tab-content active">
+                <h2>Your Posts</h2>
+                {{range .UserPosts}}
+                <div class="post">
+                    <h3>{{.Title}}</h3>
+                    <p>{{.Content}}</p>
+                    <p>Posted by {{.Username}} on {{.CreatedAt.Format "02-Jan-2006 15:04"}}</p>
+                    <p>Likes: {{.LikeCount}}</p>
+                </div>
+                {{end}}
+            </div>
+            <div id="liked-posts" class="tab-content">
+                <h2>Liked Posts</h2>
+                {{range .LikedPostsList}}
+                <div class="post">
+                    <h3>{{.Title}}</h3>
+                    <p>{{.Content}}</p>
+                    <p>Posted by {{.Username}} on {{.CreatedAt.Format "02-Jan-2006 15:04"}}</p>
+                    <p>Likes: {{.LikeCount}}</p>
+                </div>
+                {{end}}
+            </div>
+            <div id="disliked-posts" class="tab-content">
+                <h2>Disliked Posts</h2>
+                {{range .DislikedPostsList}}
+                <div class="post">
+                    <h3>{{.Title}}</h3>
+                    <p>{{.Content}}</p>
+                    <p>Posted by {{.Username}} on {{.CreatedAt.Format "02-Jan-2006 15:04"}}</p>
+                    <p>Dislikes: {{.DislikeCount}}</p>
+                </div>
+                {{end}}
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleFilters() {
+            const profileContainer = document.querySelector('.profile-container');
+            const showFiltersButton = document.getElementById('show-filters');
+            
+            profileContainer.classList.toggle('show-filters');
+            
+            if (profileContainer.classList.contains('show-filters')) {
+                showFiltersButton.textContent = 'Hide Filters';
+            } else {
+                showFiltersButton.textContent = 'Show Filters';
+            }
+        }
+
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => button.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+.comment-section {
+    width: 100%;
+    max-width: 800px; /* Increased max-width */
+    margin: 20px auto;
+    padding: 30px; /* Increased padding */
+    background-color: #f7f6f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comment-section h3 {
+    margin-bottom: 25px; /* Increased margin-bottom */
+    font-size: 26px; /* Increased font size */
+    color: #4b847d;
+    font-weight: bold;
+}
+
+.comment-form {
+    margin-bottom: 25px; /* Increased margin-bottom */
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 18px; /* Increased font size */
+    resize: vertical;
+    box-sizing: border-box;
+    font-family: Trebuchet MS;
+}
+
+.comment-form button {
+    background-color: #4b847d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 20px; /* Increased padding */
+    font-size: 18px; /* Increased font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: Trebuchet MS;
+}
+
+.comment-form button:hover {
+    background-color: #3a6e6a;
+}
+
+#comments-container {
+    margin-top: 25px; /* Increased margin-top */
+}
+
+.comment {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0; /* Increased padding */
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px; /* Increased margin-bottom */
+    font-size: 16px; /* Increased font size */
+    color: #666;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #4b847d;
+}
+
+.comment-date {
+    font-style: italic;
+}
+
+.comment-content {
+    font-size: 18px; /* Increased font size */
+    color: #333;
+    word-wrap: break-word; /* Ensure long words are broken to fit within the container */
+    overflow-wrap: break-word; 
+}
+/* Smaller styling for comment like/dislike icons */
+.comment-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px; /* Reduced gap */
+}
+
+.comment-footer .like-icon,
+.comment-footer .dislike-icon {
+    font-size: 18px; /* Reduced font size */
+    color: #4b847d;
+    transition: color 0.3s ease;
+}
+
+.post-box {
+    background-color: #f7f6f4;
+    width: 100%;
+    max-width: 800px; /* Increased max-width */
+    border-radius: 8px;
+    padding: 40px; /* Increased padding */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.post-box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px; /* Increased margin-bottom */
+}
+
+.post-box-header .username {
+    font-weight: bold;
+    color: #4b847d;
+}
+
+.post-box-header .menu-dots {
+    font-size: 24px; /* Increased font size */
+    cursor: pointer;
+}
+
+.post-box-content {
+    margin-bottom: 25px; /* Increased margin-bottom */
+    color: #333;
+    font-size: 20px; /* Increased font size */
+    word-wrap: break-word; /* Ensure long words are broken to fit within the container */
+    overflow-wrap: break-word;
+}
+
+.post-box-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px; /* Increased gap */
+    position: absolute; /* Position footer at the bottom */
+    bottom: 20px; /* Distance from bottom */
+    left: 20px; /* Distance from left */
+}
+.like-icon,
+.dislike-icon,
+.comment-icon {
+    cursor: pointer;
+    color: #4b847d;
+    font-size: 24px; /* Increased font size */
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.like-icon:hover {
+    color: #ff4d4d;
+    transform: scale(1.2);
+}
+
+.dislike-icon:hover {
+    color: #294642;
+    transform: scale(1.2);
+}
+
+.comment-icon:hover {
+    color: #294642;
+    transform: scale(1.2);
+}
+
+.like-icon.liked i {
+    color: #ff4d4d; /* Red color for liked heart */
+}
+
+.dislike-icon.disliked i {
+    color: #294642;
+}

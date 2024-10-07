@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login Form </title>
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="/login" method="POST">
+            <h2>LOGIN</h2>
+
+            {{if .ErrorMessage}}
+                <div class="error-message">
+                    <p>{{.ErrorMessage}}</p>
+                </div>
+            {{end}}
+
+            <div class="input-field">
+                <input type="text" name="username" required>
+                <label>Enter your username</label>
+            </div>
+            <div class="input-field">
+                <input type="password" name="password" required>
+                <label>Enter your password</label>
+            </div>
+            <div class="forget">
+                <label for="remember">
+                    <input type="checkbox" id="remember">
+                    <p>Remember me</p>
+                </label>
+                <a href="/register">Sign Up</a>
+            </div>
+            <button type="submit">Log In</button>
+            <div class="register">
+                <p>Don't have an account? <a href="/register">Register</a></p>
+            </div>
+            <div class="guest">
+                <p><a href="/">Continue as Guest</a></p>
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>
